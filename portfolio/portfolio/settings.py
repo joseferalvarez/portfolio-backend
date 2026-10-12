@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'language',
     'person',
     'storages',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -156,4 +157,9 @@ MAILERS = {
     'default': {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': ('rest_framework.pagination.PageNumberPagination'),
+    'PAGE_SIZE': 10,
 }
