@@ -16,5 +16,9 @@ class SocialMedia(models.Model):
     created_at = models.DateField(default=timezone.now)
     updated_at = models.DateField(default=timezone.now)
 
+    class Meta:
+        verbose_name = 'Social media'
+        verbose_name_plural = 'Social medias'
+
     def __str__(self):
         return self.name

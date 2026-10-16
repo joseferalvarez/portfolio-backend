@@ -15,8 +15,8 @@ class Company(models.Model):
         validators=[validate_image_extension],
         blank=True,
     )
-    created_at = models.DateField(timezone.now)
-    updated_at = models.DateField(timezone.now)
+    created_at = models.DateField(default=timezone.now)
+    updated_at = models.DateField(default=timezone.now)
 
     class Meta:
         verbose_name = 'Company'

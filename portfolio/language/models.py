@@ -10,5 +10,9 @@ class Language(models.Model):
     created_at = models.DateField(default=timezone.now)
     updated_at = models.DateField(default=timezone.now)
 
+    class Meta:
+        verbose_name = 'Language'
+        verbose_name_plural = 'Languages'
+
     def __str__(self):
         return self.name
