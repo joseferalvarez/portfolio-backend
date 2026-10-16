@@ -36,9 +36,12 @@ ALLOWED_HOSTS = os.environ['DJANGO_ALLOWED_HOSTS'].split(',')
 # Application definition
 
 INSTALLED_APPS = [
+    'shared',
     'language',
     'person',
+    'company',
     'storages',
+    'social_media',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -160,6 +163,8 @@ MAILERS = {
 }
 
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': ('rest_framework.pagination.PageNumberPagination'),
+    'DEFAULT_PAGINATION_CLASS': (
+        'rest_framework.pagination.PageNumberPagination'
+    ),
     'PAGE_SIZE': 10,
 }

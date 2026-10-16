@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/language/', include('language.urls')),
     path('api/v1/person/', include('person.urls')),
+    path('api/v1/socialmedia/', include('social_media.urls')),
 ]

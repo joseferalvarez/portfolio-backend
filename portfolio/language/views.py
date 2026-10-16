@@ -2,14 +2,14 @@ from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.pagination import PageNumberPagination
 
 from .models import Language
-from .serializers import LanguageSerializer
+from .serializers import LanguageListSerializer, LanguageSerializer
 
 # Create your views here.
 
 
 class LanguageListAPIView(ListAPIView):
     queryset = Language.objects.all().order_by('name')
-    serializer_class = LanguageSerializer
+    serializer_class = LanguageListSerializer
     pagination_class = PageNumberPagination
 
 
